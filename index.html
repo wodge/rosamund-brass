@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rosamund Brass Quartet</title>
+<meta name="description" content="Rosamund Brass Quartet: an award-winning brass quartet formed at the Royal Northern College of Music. Available for festivals, concerts, weddings and corporate events.">
+<meta name="theme-color" content="#1c1915">
+<meta property="og:title" content="Rosamund Brass Quartet">
+<meta property="og:description" content="Award-winning brass chamber music from the Royal Northern College of Music.">
+<meta property="og:image" content="images/hero-street.jpg">
+<link rel="icon" href="images/logo.png">
+<!-- Fonts via Bunny Fonts: a privacy-friendly Google Fonts mirror (no tracking, no cookies) -->
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link rel="stylesheet" href="https://fonts.bunny.net/css?family=cormorant-garamond:400,500,600,400i,500i|eb-garamond:400,500,400i&display=swap">
+<style>
+:root{
+  --ivory:#f7f2e8; --paper:#fbf8f2; --ink:#1c1915; --ink-2:#2a2620; --muted:#6b6357;
+  --wine:#6e1f2a; --wine-2:#8a2a36; --brass:#b8913a; --brass-hi:#d4b263; --rule:#d9cfbd;
+  --display:"Cormorant Garamond","Cormorant",Garamond,"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --body:"EB Garamond",Garamond,"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --wrap:1160px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:var(--wine)}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;margin:0 0 .4em;letter-spacing:.005em}
+h2{font-size:clamp(2.2rem,5vw,3.6rem)}
+h3{font-size:1.6rem}
+p{margin:0 0 1em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 22px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--brass);color:var(--ink);padding:8px 14px;z-index:100}
+.skip:focus{left:8px}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.eyebrow{font-family:var(--body);font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--brass);display:block;margin-bottom:14px}
+.orn{display:flex;align-items:center;gap:18px;color:var(--brass);margin:0 0 26px}
+.orn::before,.orn::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,currentColor,transparent)}
+.orn svg{width:46px;height:14px}
+.center{text-align:center}
+.btn{display:inline-block;font-family:var(--body);font-size:.82rem;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;padding:1em 2em;border:1px solid currentColor;color:inherit;transition:background .25s,color .25s}
+.btn:hover{background:var(--brass);border-color:var(--brass);color:var(--ink)}
+.btn-solid{background:var(--wine);border-color:var(--wine);color:var(--ivory)}
+.btn-solid:hover{background:var(--wine-2);border-color:var(--wine-2);color:#fff}
+
+/* Header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;color:var(--ivory);transition:background .35s,box-shadow .35s}
+header.solid{background:rgba(28,25,21,.94);box-shadow:0 1px 0 rgba(184,145,58,.35);backdrop-filter:blur(8px)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.brand img{width:46px;height:46px;border-radius:50%;object-fit:cover;background:var(--ink-2)}
+.brand span{font-family:var(--display);font-size:1.45rem;letter-spacing:.06em}
+.brand small{display:block;font-family:var(--body);font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:var(--brass-hi)}
+nav{display:flex;gap:28px}
+nav a{color:inherit;text-decoration:none;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;opacity:.85}
+nav a:hover{opacity:1;color:var(--brass-hi)}
+.menu{display:none;background:none;border:1px solid rgba(247,242,232,.4);color:inherit;font:inherit;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;padding:.5em .9em;cursor:pointer}
+@media (max-width:860px){
+  .menu{display:block}
+  nav{position:absolute;top:78px;left:0;right:0;flex-direction:column;gap:0;background:rgba(28,25,21,.97);display:none;padding:8px 22px 20px}
+  nav.open{display:flex}
+  nav a{padding:12px 0;border-bottom:1px solid rgba(184,145,58,.2)}
+}
+
+/* Hero */
+.hero{position:relative;height:100vh;min-height:620px;max-height:1000px;color:var(--ivory);overflow:hidden;background:var(--ink)}
+.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:fade 21s infinite;filter:saturate(.85) contrast(1.05)}
+.slides img:nth-child(1){animation-delay:0s}
+.slides img:nth-child(2){animation-delay:7s}
+.slides img:nth-child(3){animation-delay:14s}
+@keyframes fade{0%{opacity:0;transform:scale(1.06)}6%{opacity:1}33%{opacity:1}40%{opacity:0;transform:scale(1)}100%{opacity:0}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,25,21,.55) 0%,rgba(28,25,21,.15) 35%,rgba(28,25,21,.35) 60%,rgba(28,25,21,.92) 100%)}
+.hero-inner{position:absolute;left:0;right:0;bottom:11vh;z-index:2;text-align:center}
+.hero h1{font-size:clamp(3.2rem,11vw,8.2rem);font-weight:400;letter-spacing:.02em;line-height:.95;margin:0}
+.hero h1 em{display:block;font-size:.34em;letter-spacing:.42em;text-transform:uppercase;font-style:normal;font-family:var(--body);color:var(--brass-hi);margin-top:18px}
+.hero p{font-style:italic;font-size:clamp(1.1rem,2.2vw,1.35rem);max-width:640px;margin:22px auto 30px;color:rgba(247,242,232,.88)}
+.scroll{position:absolute;left:50%;bottom:22px;z-index:2;transform:translateX(-50%);width:1px;height:46px;background:linear-gradient(var(--brass),transparent)}
+
+/* Intro */
+.section{padding:clamp(80px,11vw,140px) 0}
+.intro{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(36px,6vw,90px);align-items:center}
+@media (max-width:860px){.intro{grid-template-columns:1fr}}
+.intro .lede::first-letter{float:left;font-family:var(--display);font-size:5.2em;line-height:.78;padding:.06em .12em 0 0;color:var(--wine)}
+.lede{font-size:1.18rem}
+.frame{position:relative}
+.frame img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:sepia(.12) saturate(.9)}
+.frame::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1px solid var(--brass);z-index:-1}
+.sig{font-family:var(--display);font-style:italic;font-size:1.5rem;color:var(--wine)}
+
+/* Accolades */
+.accolades{background:var(--ink);color:var(--ivory);position:relative;overflow:hidden}
+.accolades::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 300px at 50% 0%,rgba(184,145,58,.18),transparent 70%)}
+.acc-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(184,145,58,.35);border-bottom:1px solid rgba(184,145,58,.35)}
+.acc{padding:40px 22px;text-align:center;border-right:1px solid rgba(184,145,58,.2)}
+.acc:last-child{border-right:0}
+.acc .n{font-family:var(--display);font-size:clamp(3rem,6vw,4.4rem);line-height:1;color:var(--brass-hi)}
+.acc .l{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;margin-top:12px;color:rgba(247,242,232,.75)}
+.acc .d{font-style:italic;font-size:.98rem;color:rgba(247,242,232,.6);margin-top:6px}
+@media (max-width:860px){.acc-grid{grid-template-columns:1fr 1fr}.acc:nth-child(2){border-right:0}.acc:nth-child(-n+2){border-bottom:1px solid rgba(184,145,58,.2)}}
+.venues{position:relative;text-align:center;margin-top:46px;font-family:var(--display);font-size:clamp(1.15rem,2.2vw,1.5rem);font-style:italic;color:rgba(247,242,232,.82)}
+.venues b{font-weight:400;color:var(--brass-hi);font-style:normal;padding:0 .5em}
+
+/* Players */
+.players{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:50px}
+@media (max-width:1000px){.players{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.players{grid-template-columns:1fr}}
+.player figure{margin:0 0 18px;overflow:hidden;background:var(--ivory)}
+.player img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .6s,transform .8s}
+.player:hover img{filter:grayscale(0);transform:scale(1.03)}
+.player h3{margin-bottom:2px}
+.player .inst{font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--brass);margin-bottom:12px}
+.player p{font-size:1rem;color:var(--muted)}
+
+/* Quote band */
+.quote{position:relative;color:var(--ivory);text-align:center;overflow:hidden;background:var(--ink)}
+.quote img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32;filter:grayscale(.4)}
+.quote .wrap{position:relative}
+.quote blockquote{margin:0 auto;max-width:860px;font-family:var(--display);font-size:clamp(1.7rem,3.6vw,2.7rem);font-style:italic;line-height:1.25}
+.quote cite{display:block;margin-top:22px;font-style:normal;font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brass-hi)}
+
+/* Performances */
+.perf{list-style:none;margin:50px 0 0;padding:0;border-top:1px solid var(--rule)}
+.perf li{display:grid;grid-template-columns:150px 120px 1fr auto;gap:28px;align-items:center;padding:26px 0;border-bottom:1px solid var(--rule)}
+.perf .date{font-family:var(--display);line-height:1.1}
+.perf .date b{display:block;font-size:2.6rem;font-weight:500;color:var(--wine)}
+.perf .date span{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.perf .thumb{width:120px;height:90px;object-fit:cover;filter:sepia(.15)}
+.perf .thumb.empty{background:var(--ivory);border:1px solid var(--rule);display:grid;place-items:center;color:var(--brass);font-size:2rem;font-family:var(--display)}
+.perf .thumb.empty::before{content:"\2766"}
+.perf h3{font-size:1.5rem;margin:0 0 4px}
+.perf .venue{font-style:italic;color:var(--muted);font-size:1rem;margin:0 0 4px}
+.perf .desc{font-size:1rem;margin:0}
+.perf a.more{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+.perf .badge{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);white-space:nowrap}
+@media (max-width:820px){.perf li{grid-template-columns:90px 1fr;gap:16px}.perf .thumb,.perf .thumb.empty{display:none}.perf .act{grid-column:2}.perf .date b{font-size:2rem}}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:190px;gap:10px;margin-top:50px}
+.gallery figure{margin:0;overflow:hidden;position:relative;background:var(--ivory)}
+.gallery img{width:100%;height:100%;object-fit:cover;filter:sepia(.1) saturate(.9);transition:transform .8s}
+.gallery figure:hover img{transform:scale(1.05)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 10px;font-style:italic;font-size:.9rem;color:var(--ivory);background:linear-gradient(transparent,rgba(28,25,21,.85));opacity:0;transition:opacity .4s}
+.gallery figure:hover figcaption{opacity:1}
+.g1{grid-column:span 3;grid-row:span 2}.g2{grid-column:span 3}.g3{grid-column:span 2}.g4{grid-column:span 1}.g5{grid-column:span 2}.g6{grid-column:span 2}.g7{grid-column:span 2}
+@media (max-width:760px){.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:150px}.gallery figure{grid-column:span 1!important;grid-row:span 1!important}.gallery .g1{grid-column:span 2!important;grid-row:span 2!important}}
+
+/* Book */
+.book{background:var(--ivory);border-block:1px solid var(--rule)}
+.occasions{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:50px;border:1px solid var(--rule);background:var(--paper)}
+.occ{padding:40px 32px;border-right:1px solid var(--rule);text-align:center}
+.occ:last-child{border-right:0}
+.occ svg{width:40px;height:40px;color:var(--brass);margin:0 auto 18px}
+.occ p{color:var(--muted);font-size:1rem;margin:0}
+@media (max-width:820px){.occasions{grid-template-columns:1fr}.occ{border-right:0;border-bottom:1px solid var(--rule)}.occ:last-child{border-bottom:0}}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(36px,6vw,80px)}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+.ways{list-style:none;padding:0;margin:26px 0 0}
+.ways li{padding:16px 0;border-bottom:1px solid var(--rule)}
+.ways small{display:block;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--brass)}
+.ways a{font-family:var(--display);font-size:1.6rem;text-decoration:none;color:var(--ink)}
+.ways a:hover{color:var(--wine)}
+form{display:grid;gap:18px}
+label{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:1.05rem;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--rule);padding:.5em 0;border-radius:0}
+textarea{min-height:120px;resize:vertical;border:1px solid var(--rule);padding:.7em}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brass)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:560px){.two{grid-template-columns:1fr}}
+.note{font-size:.9rem;font-style:italic;color:var(--muted);margin:0}
+
+footer{background:var(--ink);color:rgba(247,242,232,.7);padding:60px 0 34px;text-align:center;font-size:.95rem}
+footer .brand{justify-content:center;color:var(--ivory);margin-bottom:22px}
+.social{display:flex;justify-content:center;gap:22px;margin:0 0 26px;padding:0;list-style:none}
+.social a{color:var(--ivory);text-decoration:none;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase}
+.social a:hover{color:var(--brass-hi)}
+.legal{border-top:1px solid rgba(184,145,58,.25);padding-top:22px;margin-top:22px;font-size:.85rem}
+.legal a{color:inherit}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .9s,transform .9s}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.slides img:first-child{opacity:1}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header id="hdr">
+  <div class="wrap bar">
+    <a class="brand" href="#top"><img data-img="logo.png" alt=""><span>Rosamund<small>Brass Quartet</small></span></a>
+    <button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Main">
+      <a href="#about">About</a><a href="#players">The Players</a><a href="#performances">Performances</a><a href="#book">Book Us</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="slides" aria-hidden="true">
+    <img data-img="hero-street.jpg" alt="">
+    <img data-img="hero-2.jpg" alt="">
+    <img data-img="hero-3.jpg" alt="">
+  </div>
+  <div class="hero-inner wrap">
+    <h1>Rosamund<em>Brass Quartet</em></h1>
+    <p>Award-winning brass chamber music, born at the Royal Northern College of Music.</p>
+    <a class="btn" href="#book">Book the quartet</a>
+  </div>
+  <span class="scroll" aria-hidden="true"></span>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap intro">
+    <div class="frame reveal"><img data-img="quartet.jpg" alt="The Rosamund Brass Quartet"></div>
+    <div class="reveal">
+      <span class="eyebrow">Since 2020</span>
+      <h2>Four friends, one sound.</h2>
+      <p class="lede">Rosamund Brass formed in September 2020 among friends studying at the Royal Northern College of Music in Manchester — though many of us had known each other far longer, through the National Youth Brass Band of Great Britain and the youth banding world.</p>
+      <p>Our debut came at the RNCM Play festival in March 2021, with a performance recorded remotely and stitched together under Covid restrictions. Since then we have played the RNCM Festival of Brass, St Martin-in-the-Fields, ITV's Christmas carol service and the 2025 Lucerne Festival.</p>
+      <p>We love exploring the brass quartet repertoire, and we've commissioned more than eleven new works for the format, notably from Adam Gorb and David Horne.</p>
+      <p class="sig">Seb, Adam, Georgia &amp; Alex</p>
+    </div>
+  </div>
+</section>
+
+<section class="section accolades">
+  <div class="wrap">
+    <div class="orn"><svg viewBox="0 0 46 14" fill="none" stroke="currentColor"><path d="M1 7h14M31 7h14"/><path d="M23 1l6 6-6 6-6-6z" fill="currentColor"/></svg></div>
+    <div class="acc-grid">
+      <div class="acc"><div class="n">2020</div><div class="l">Founded</div><div class="d">at the RNCM, Manchester</div></div>
+      <div class="acc"><div class="n">2×</div><div class="l">Philip Jones Brass Prize</div><div class="d">2022 &amp; 2023</div></div>
+      <div class="acc"><div class="n">2×</div><div class="l">Chris Rowland Audience Prize</div><div class="d">2022 &amp; 2023</div></div>
+      <div class="acc"><div class="n">11+</div><div class="l">New Commissions</div><div class="d">for brass quartet</div></div>
+    </div>
+    <p class="venues">Our players have performed at <b>Royal Albert Hall</b>·<b>Bridgewater Hall</b>·<b>KKL Luzern</b>·<b>Grieghallen</b>·<b>St Martin-in-the-Fields</b></p>
+  </div>
+</section>
+
+<section class="section" id="players">
+  <div class="wrap">
+    <div class="center reveal"><span class="eyebrow">The ensemble</span><h2>The Players</h2></div>
+    <div class="players" id="playerList"></div>
+  </div>
+</section>
+
+<section class="section quote">
+  <img data-img="itv.jpg" alt="">
+  <div class="wrap reveal">
+    <div class="orn"><svg viewBox="0 0 46 14" fill="none" stroke="currentColor"><path d="M1 7h14M31 7h14"/><path d="M23 1l6 6-6 6-6-6z" fill="currentColor"/></svg></div>
+    <blockquote>Exploring the brass quartet repertoire, and commissioning the music of tomorrow from composers new and established.</blockquote>
+    <cite>Our mission</cite>
+  </div>
+</section>
+
+<section class="section" id="performances">
+  <div class="wrap">
+    <div class="center reveal"><span class="eyebrow">From Manchester to Lucerne</span><h2>Performances</h2>
+      <p style="max-width:620px;margin:0 auto;color:var(--muted);font-style:italic">A selection of recent concerts, festivals and broadcasts.</p></div>
+    <ul class="perf" id="perfList"></ul>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<section class="section book" id="book">
+  <div class="wrap">
+    <div class="center reveal"><span class="eyebrow">Now taking bookings</span><h2>Music for your occasion</h2>
+      <p style="max-width:640px;margin:0 auto;color:var(--muted)">From festival stages to a quiet chapel, we tailor our programme to the moment — classical, contemporary, sacred or light.</p></div>
+    <div class="occasions reveal">
+      <div class="occ"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M8 34V14l12-8 12 8v20"/><path d="M4 34h32M16 34V24h8v10"/><circle cx="20" cy="15" r="3"/></svg><h3>Festivals &amp; Concerts</h3><p>Full recitals, outdoor sets and showcase programmes for arts festivals and music societies.</p></div>
+      <div class="occ"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="15" cy="22" r="9"/><circle cx="25" cy="22" r="9"/><path d="M17 8l3-4 3 4"/></svg><h3>Weddings</h3><p>Ceremony processionals, signing music and drinks receptions with a touch of grandeur.</p></div>
+      <div class="occ"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M10 6h20v8a10 10 0 0 1-20 0z"/><path d="M20 24v6M13 34h14"/><path d="M10 9H5a5 5 0 0 0 6 6M30 9h5a5 5 0 0 1-6 6"/></svg><h3>Corporate &amp; Civic</h3><p>Receptions, launches, dinners and ceremonies that deserve live music of real distinction.</p></div>
+    </div>
+    <p class="center" style="margin-top:40px"><a class="btn btn-solid" href="#contact">Enquire about a booking</a></p>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap contact">
+    <div class="reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Let's talk music.</h2>
+      <p style="color:var(--muted)">Tell us about your event and we'll come back to you with availability and ideas for a programme.</p>
+      <ul class="ways" id="ways"></ul>
+    </div>
+    <form class="reveal" id="enquiry">
+      <div class="two"><label>Your name<input name="name" required autocomplete="name"></label><label>Occasion<select name="occasion"><option>Concert or festival</option><option>Wedding</option><option>Corporate or civic event</option><option>Something else</option></select></label></div>
+      <div class="two"><label>Date (if known)<input name="date" type="date"></label><label>Location<input name="where"></label></div>
+      <label>Your message<textarea name="msg" required></textarea></label>
+      <p class="note" id="formNote">Sending opens your own email app with the details filled in — nothing is stored on this site.</p>
+      <div><button class="btn btn-solid" type="submit">Send enquiry</button></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><img data-img="logo.png" alt=""><span>Rosamund<small>Brass Quartet</small></span></a>
+    <ul class="social" id="social"></ul>
+    <div class="legal">© <span id="yr">2026</span> Rosamund Brass Quartet. All rights reserved. · This site uses no cookies. · Site by <a href="https://noworriesit.co.uk/" rel="noopener">No Worries IT Ltd</a></div>
+  </div>
+</footer>
+
+<script>
+/* ============ EDIT ME ============ */
+const SITE = {
+  email: '',                       // e.g. 'hello@rosamundbrass.co.uk' — leave blank to hide email options
+  phone: '+44 7585 087411',
+  socials: [
+    ['Facebook','https://www.facebook.com/rosamundbrass'],
+    ['Instagram','https://www.instagram.com/rosamundbrass/'],
+    ['YouTube','https://www.youtube.com/@rosamundbrass1541']
+  ],
+  players: [
+    { name:'Seb Williman', inst:'Trumpet', img:'seb.jpg', bio:'Freelance trumpeter based in Manchester, working with orchestras including the Hallé and Opera North. Former principal cornet of Carlton Main Frickley Colliery Band.' },
+    { name:'Adam Hofland-Ward', inst:'Flugelhorn & Cornet', img:'adam.jpg', bio:'Secondary music teacher in Wakefield and flugelhorn with Hepworth Band; formerly soprano cornet with Grimethorpe Colliery and Rothwell Temperance bands.' },
+    { name:'Georgia Woodhead', inst:'Horn', img:'georgia.jpg', bio:'Music teacher from Rochdale and solo horn with Hepworth Band, and a best-instrumentalist winner at the Yorkshire Regional Championships.' },
+    { name:'Alex Barron', inst:'Euphonium', img:'alex.jpg', bio:'Music teacher in Sheffield; former principal euphonium of the National Youth Brass Band, with Grimethorpe, Hammonds and the Hallé among his credits.' }
+  ],
+  performances: [
+    { d:'2025-11-26', t:'Rosamund Brass in Delph', v:'Millgate Arts Centre, Delph', x:'A full evening concert in the Saddleworth Concert Society season.', img:'event-delph.png' },
+    { d:'2025-08-24', t:'Lucerne Festival', v:'Outside the KKL, Lucerne, Switzerland', x:'An outdoor programme in memory of Philip Jones, with music by Vejvoda, Grieg and Wright.', img:'event-lucerne.jpg' },
+    { d:'2024-02-19', t:'Philip Jones Brass Spectacular', v:"St John's Smith Square, London", x:'A showcase of the finest UK conservatoire brass ensembles.', img:'event-philip-jones.jpeg' },
+    { d:'2024-02-11', t:'Heron Theatre', v:'Milnthorpe', x:'A welcome return for our second concert at the Heron.', img:'event-heron.jpg' },
+    { d:'2024-01-28', t:'RNCM Festival of Brass', v:'RNCM Concert Hall, Manchester', x:"Dorothy Gates' Another World with James Gourlay and the RNCM Brass Band.", img:'event-festival.jpeg' },
+    { d:'2023-12-24', t:"ITV's Christmas Carol Concert", v:"St Elisabeth's Church, Stockport · ITV1", x:'Accompanying choir and congregation for the Christmas Eve broadcast hosted by Jane McDonald.', img:'event-itv.jpeg' },
+    { d:'2023-11-18', t:'All Saints, Burton in Lonsdale', v:'Burton in Lonsdale', x:'A much-loved return visit for an afternoon concert.', img:'event-burton.jpg' },
+    { d:'2023-11-03', t:'RNCM Spotlight Concert', v:'Royal Northern College of Music', x:'World premieres of new works by RNCM staff and student composers.', img:'' },
+    { d:'2023-09-15', t:'Coffee Concert', v:'Pavilion Arts Centre, Buxton', x:'A Friday lunchtime recital.', img:'event-buxton.png' }
+  ],
+  gallery: [
+    ['hero-street.jpg','On the streets of Manchester'],['itv.jpg',"ITV's Christmas Carol Concert"],['event-lucerne.jpg','Lucerne Festival, 2025'],
+    ['about-2.jpg','In rehearsal'],['event-heron.jpg','The Heron Theatre'],['event-philip-jones.jpeg',"St John's Smith Square"],['hero-3.jpg','Rosamund Brass']
+  ]
+};
+/* ================================= */
+
+/* Images load from ./images/. If a file isn't there yet, fall back to the original Drupal site. */
+const ORIGINAL = {
+  'logo.png':'rosaRoundwith%20Text.png','hero-street.jpg':'rosa1.jpg','hero-2.jpg':'rosa3.jpg','hero-3.jpg':'rosa5.jpg',
+  'itv.jpg':'rosaITV.jpg','about-2.jpg':'rosaohil.jpg','quartet.jpg':'2023-09/316672581_515501457261541_6054540315518361943_n.jpg',
+  'seb.jpg':'seb.jpg','adam.jpg':'adam.jpg','georgia.jpg':'georgia.jpg','alex.jpg':'alex.jpg',
+  'event-lucerne.jpg':'2025-11/Lucerne%20Festival.jpg','event-delph.png':'2025-11/Rosamund%20Millgate%20Delph.png',
+  'event-philip-jones.jpeg':'2023-12/Rosamund%20Philip%20Jones.jpeg','event-festival.jpeg':'2023-12/Rosamund%20Festival.jpeg',
+  'event-itv.jpeg':'2023-12/Rosamund%20ITV%202.jpeg','event-burton.jpg':'2023-09/311974815_484730453671975_7126417505141767935_n.jpg',
+  'event-heron.jpg':'2023-09/339063764_739819077869293_8793083926759442161_n.jpg','event-buxton.png':'2023-09/rosamundBuxton.png'
+};
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const img = (f, alt='', cls='') => f ? `<img data-img="${f}" alt="${esc(alt)}" ${cls?`class="${cls}"`:''} loading="lazy">` : `<div class="thumb empty"></div>`;
+
+$('#playerList').innerHTML = SITE.players.map(p => `<article class="player reveal"><figure>${img(p.img,p.name)}</figure><h3>${esc(p.name)}</h3><div class="inst">${esc(p.inst)}</div><p>${esc(p.bio)}</p></article>`).join('');
+
+const M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const today = new Date().toISOString().slice(0,10);
+$('#perfList').innerHTML = SITE.performances.map(e => {
+  const [y,m,d] = e.d.split('-');
+  const up = e.d >= today;
+  return `<li class="reveal"><div class="date"><b>${+d}</b><span>${M[+m-1]} ${y}</span></div>${img(e.img,e.t,'thumb')}<div><h3>${esc(e.t)}</h3><p class="venue">${esc(e.v)}</p><p class="desc">${esc(e.x)}</p></div><div class="act"><span class="badge">${up?'Upcoming':'Performed'}</span></div></li>`;
+}).join('');
+
+$('#gallery').innerHTML = SITE.gallery.map(([f,c],i) => `<figure class="g${i+1}">${img(f,c)}<figcaption>${esc(c)}</figcaption></figure>`).join('');
+
+const tel = SITE.phone.replace(/\s/g,'');
+let ways = `<li><small>Call</small><a href="tel:${tel}">${esc(SITE.phone)}</a></li><li><small>WhatsApp</small><a href="https://api.whatsapp.com/send?phone=${encodeURIComponent(tel)}" rel="noopener">Message us</a></li>`;
+if (SITE.email) ways = `<li><small>Email</small><a href="mailto:${SITE.email}">${esc(SITE.email)}</a></li>` + ways;
+$('#ways').innerHTML = ways;
+$('#social').innerHTML = SITE.socials.map(([n,u]) => `<li><a href="${u}" rel="noopener">${n}</a></li>`).join('');
+
+/* Enquiry form → email app (or WhatsApp if no email is set) */
+$('#enquiry').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = `Name: ${f.get('name')}\nOccasion: ${f.get('occasion')}\nDate: ${f.get('date')||'tbc'}\nLocation: ${f.get('where')||'tbc'}\n\n${f.get('msg')}`;
+  if (SITE.email) location.href = `mailto:${SITE.email}?subject=${encodeURIComponent('Booking enquiry: '+f.get('occasion'))}&body=${encodeURIComponent(body)}`;
+  else window.open(`https://api.whatsapp.com/send?phone=${encodeURIComponent(tel)}&text=${encodeURIComponent(body)}`, '_blank', 'noopener');
+});
+if (!SITE.email) $('#formNote').textContent = 'Sending opens WhatsApp with your details filled in — nothing is stored on this site.';
+
+/* Resolve images: local first, original site as fallback */
+document.querySelectorAll('[data-img]').forEach(el => {
+  const f = el.dataset.img;
+  el.addEventListener('error', function once(){ el.removeEventListener('error', once); if (ORIGINAL[f]) el.src = 'https://rosamundbrass.co.uk/sites/default/files/' + ORIGINAL[f]; });
+  el.src = 'images/' + f;
+});
+
+/* Header, menu, reveals */
+const hdr = $('#hdr'), menu = $('.menu'), nav = $('#nav');
+const onScroll = () => hdr.classList.toggle('solid', scrollY > 60 || nav.classList.contains('open'));
+addEventListener('scroll', onScroll, {passive:true}); onScroll();
+menu.addEventListener('click', () => { const o = nav.classList.toggle('open'); menu.setAttribute('aria-expanded', o); onScroll(); });
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); menu.setAttribute('aria-expanded', false); onScroll(); }));
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+$('#yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

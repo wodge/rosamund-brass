@@ -1,0 +1,18 @@
+services:
+  rosamund-brass:
+    image: nginx:alpine
+    container_name: rosamund-brass
+    restart: unless-stopped
+    volumes:
+      # Mount the files and images folder only (not the whole repo, so .git stays private).
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./images:/usr/share/nginx/html/images:ro
+    networks: [web]
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.rosamund.rule=Host(`rosamundbrass.co.uk`) || Host(`www.rosamundbrass.co.uk`)
+      - traefik.http.routers.rosamund.entrypoints=websecure
+      - traefik.http.routers.rosamund.tls.certresolver=letsencrypt
+networks:
+  web:
+    external: true
