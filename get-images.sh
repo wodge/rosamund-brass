@@ -7,6 +7,7 @@ mkdir -p images
 BASE="https://rosamundbrass.co.uk/sites/default/files"
 while read -r name path; do
   [ -z "$name" ] && continue
+  [ -s "images/$name" ] && { echo "have  $name"; continue; }
   if curl -fsSL "$BASE/$path" -o "images/$name"; then echo "ok    $name"; else echo "FAIL  $name  ($path)"; fi
 done <<'LIST'
 logo.png rosaRoundwith%20Text.png

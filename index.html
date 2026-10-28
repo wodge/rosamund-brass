@@ -65,16 +65,16 @@ nav a:hover{opacity:1;color:var(--brass-hi)}
 
 /* Hero */
 .hero{position:relative;height:100vh;min-height:620px;max-height:1000px;color:var(--ivory);overflow:hidden;background:var(--ink)}
-.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:fade 21s infinite;filter:saturate(.85) contrast(1.05)}
+.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;opacity:0;animation:fade 21s infinite;filter:saturate(.85) contrast(1.05)}
 .slides img:nth-child(1){animation-delay:0s}
 .slides img:nth-child(2){animation-delay:7s}
 .slides img:nth-child(3){animation-delay:14s}
 @keyframes fade{0%{opacity:0;transform:scale(1.06)}6%{opacity:1}33%{opacity:1}40%{opacity:0;transform:scale(1)}100%{opacity:0}}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,25,21,.55) 0%,rgba(28,25,21,.15) 35%,rgba(28,25,21,.35) 60%,rgba(28,25,21,.92) 100%)}
-.hero-inner{position:absolute;left:0;right:0;bottom:11vh;z-index:2;text-align:center}
-.hero h1{font-size:clamp(3.2rem,11vw,8.2rem);font-weight:400;letter-spacing:.02em;line-height:.95;margin:0}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,25,21,.5) 0%,rgba(28,25,21,0) 18%,rgba(28,25,21,0) 45%,rgba(28,25,21,.78) 68%,rgba(28,25,21,.96) 100%)}
+.hero-inner{position:absolute;left:0;right:0;bottom:6vh;z-index:2;text-align:center}
+.hero h1{font-size:clamp(3rem,9vw,6.2rem);font-weight:400;letter-spacing:.02em;line-height:.95;margin:0}
 .hero h1 em{display:block;font-size:.34em;letter-spacing:.42em;text-transform:uppercase;font-style:normal;font-family:var(--body);color:var(--brass-hi);margin-top:18px}
-.hero p{font-style:italic;font-size:clamp(1.1rem,2.2vw,1.35rem);max-width:640px;margin:22px auto 30px;color:rgba(247,242,232,.88)}
+.hero p{font-style:italic;font-size:clamp(1.05rem,2vw,1.25rem);max-width:640px;margin:14px auto 22px;color:rgba(247,242,232,.88)}
 .scroll{position:absolute;left:50%;bottom:22px;z-index:2;transform:translateX(-50%);width:1px;height:46px;background:linear-gradient(var(--brass),transparent)}
 
 /* Intro */
@@ -317,7 +317,7 @@ const SITE = {
   players: [
     { name:'Seb Williman', inst:'Trumpet', img:'seb.jpg', bio:'Freelance trumpeter based in Manchester, working with orchestras including the Hallé and Opera North. Former principal cornet of Carlton Main Frickley Colliery Band.' },
     { name:'Adam Hofland-Ward', inst:'Flugelhorn & Cornet', img:'adam.jpg', bio:'Secondary music teacher in Wakefield and flugelhorn with Hepworth Band; formerly soprano cornet with Grimethorpe Colliery and Rothwell Temperance bands.' },
-    { name:'Georgia Woodhead', inst:'Horn', img:'georgia.jpg', bio:'Music teacher from Rochdale and solo horn with Hepworth Band, and a best-instrumentalist winner at the Yorkshire Regional Championships.' },
+    { name:'Georgia Woodhead', inst:'Tenor Horn', img:'georgia.jpg', bio:'Music teacher from Rochdale and solo horn with Hepworth Band, and a best-instrumentalist winner at the Yorkshire Regional Championships.' },
     { name:'Alex Barron', inst:'Euphonium', img:'alex.jpg', bio:'Music teacher in Sheffield; former principal euphonium of the National Youth Brass Band, with Grimethorpe, Hammonds and the Hallé among his credits.' }
   ],
   performances: [
